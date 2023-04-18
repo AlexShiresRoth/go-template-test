@@ -1,5 +1,6 @@
 package journey
 
+// @TODO build out struct
 // type journey struct {
 // 	JOURNEYURLNICKNAME string `json:"Journey URL Nickname"`
 // PRIMARYITEM string `json:"Primary Item"`
@@ -27,6 +28,7 @@ func GetJourneyFromContentful(c *gin.Context) {
 
 	id := c.Param("id")
 
+	// access token is read only
 	url := fmt.Sprintf("https://cdn.contentful.com/spaces/yiil34ggxxe1/environments/client-catalog-dev/entries/%v?access_token=%v", id, "RqfHs1di8kEu9pqZCQF2_m0Ehmlv2zob3QvgqeEN-gQ")
 
 	resp, err := http.Get(url)
